@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | 佐々木 舞人</title>
+  <meta name="description" content="佐々木舞人 — AI Engineer at neoAI / NVIDIA Student Ambassador / 東京工科大学大学院 M1" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── CANVAS BACKGROUND ── -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <div class="nav-logo"><span class="bracket">[</span>Maito Sasaki<span class="bracket">]</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="menu">&#9776;</button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, World! 👋</p>
+      <h1 class="hero-name">
+        <span class="name-en">Maito Sasaki</span>
+        <span class="name-ja">佐々木 舞人</span>
+      </h1>
+      <h2 class="hero-title">
+        <span id="typed-text"></span><span class="cursor">|</span>
+      </h2>
+      <p class="hero-desc">
+        AIエンジニア &amp; 研究者として、最先端のLLM・マルチメディアAI技術を<br />
+        実世界のプロダクトに落とし込むことを追求しています。
+      </p>
+      <div class="hero-badges">
+        <span class="hero-badge badge-nvidia">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="3"/></svg>
+          NVIDIA Student Ambassador
+        </span>
+        <span class="hero-badge badge-neo">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>
+          AI Engineer @ neoAI
+        </span>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+      <div class="hero-scroll-hint">scroll down ↓</div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="code-window">
+        <div class="code-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="code-title">profile.py</span>
+        </div>
+        <pre class="code-body"><code><span class="kw">class</span> <span class="cls">MaitoSasaki</span>:
+    <span class="var">name</span>     = <span class="str">"佐々木 舞人"</span>
+    <span class="var">role</span>     = <span class="str">"AI Engineer"</span>
+    <span class="var">company</span>  = <span class="str">"株式会社 neoAI"</span>
+    <span class="var">program</span>  = <span class="str">"東京工科大学大学院 M1"</span>
+    <span class="var">lab</span>      = <span class="str">"マルチメディアデータモデリング"</span>
+    <span class="var">nvidia</span>   = <span class="str">"Student Ambassador 🟢"</span>
+    <span class="var">interests</span> = [
+        <span class="str">"LLM / GenAI"</span>,
+        <span class="str">"Computer Vision"</span>,
+        <span class="str">"Multimodal AI"</span>,
+    ]</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <h2 class="section-title"><span class="accent">//</span> About Me</h2>
+      <div class="about-grid">
+        <div class="about-photo">
+          <div class="photo-placeholder">
+            <!-- 写真があれば <img src="photo.jpg" alt="佐々木舞人"> に変えてください -->
+            <div class="avatar-letters">舞人</div>
+          </div>
+        </div>
+        <div class="about-text">
+          <p>
+            東京工科大学大学院 バイオ情報・メディア研究科 コンピュータサイエンス専攻、
+            マルチメディアデータモデリング研究室に所属する修士1年（M1）です。
+          </p>
+          <p>
+            現在は株式会社 <strong>neoAI</strong> でAIエンジニアとして勤務しながら、
+            LLMの実用化・マルチモーダルAIの研究に取り組んでいます。
+            2026年4月からは <strong>NVIDIA学生アンバサダー</strong>として、
+            最先端のGPUコンピューティング技術の普及活動にも携わっています。
+          </p>
+          <p>
+            「研究とプロダクト開発の両立」を大切にし、
+            学術的な知見を実際のサービスに活かすエンジニアリングを目指しています。
+          </p>
+          <div class="about-meta">
+            <div class="meta-item">
+              <span class="meta-icon">🎓</span>
+              <span>東京工科大学大学院 バイオ情報・メディア研究科 CS専攻 M1</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">🔬</span>
+              <span>マルチメディアデータモデリング研究室</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">💼</span>
+              <span>AIエンジニア @ 株式会社 neoAI</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">🟢</span>
+              <span>NVIDIA Student Ambassador (2026.04〜)</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">📍</span>
+              <span>Tokyo, Japan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience" class="section section-dark">
+    <div class="section-inner">
+      <h2 class="section-title"><span class="accent">//</span> Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item" data-delay="0">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div class="tl-badge badge-nvidia-tl">NVIDIA</div>
+              <span class="tl-period">2026.04 — 現在</span>
+            </div>
+            <h3 class="tl-title">NVIDIA Student Ambassador</h3>
+            <p class="tl-org">NVIDIA Corporation</p>
+            <p class="tl-desc">
+              NVIDIAの学生アンバサダープログラムに選出。
+              CUDA・GPU並列計算・生成AI技術の学生コミュニティへの普及活動、
+              ハンズオンワークショップの企画・運営を担当。
+            </p>
+            <div class="tl-tags">
+              <span>CUDA</span><span>GPU Computing</span><span>GenAI</span><span>Community</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-delay="150">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div class="tl-badge badge-neo-tl">neoAI</div>
+              <span class="tl-period">現在</span>
+            </div>
+            <h3 class="tl-title">AIエンジニア</h3>
+            <p class="tl-org">株式会社 neoAI</p>
+            <p class="tl-desc">
+              LLMを活用したプロダクト開発・システム設計に従事。
+              RAGシステムの構築、プロンプトエンジニアリング、
+              AIアプリケーションのPoC開発から本番運用まで幅広く担当。
+            </p>
+            <div class="tl-tags">
+              <span>LLM</span><span>RAG</span><span>Python</span><span>AI System Design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-delay="300">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div class="tl-badge badge-univ-tl">TUT</div>
+              <span class="tl-period">2025.04 — 現在</span>
+            </div>
+            <h3 class="tl-title">修士研究員 (M1)</h3>
+            <p class="tl-org">東京工科大学大学院 マルチメディアデータモデリング研究室</p>
+            <p class="tl-desc">
+              バイオ情報・メディア研究科 コンピュータサイエンス専攻に在籍。
+              マルチメディアデータのモデリング・解析に関する研究を推進中。
+            </p>
+            <div class="tl-tags">
+              <span>Multimedia AI</span><span>Data Modeling</span><span>Research</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills" class="section">
+    <div class="section-inner">
+      <h2 class="section-title"><span class="accent">//</span> Skills</h2>
+      <div class="skills-grid">
+
+        <div class="skill-card" data-delay="0">
+          <div class="skill-icon">🤖</div>
+          <h3>AI / LLM</h3>
+          <ul>
+            <li><span class="skill-tag">LLM Integration</span></li>
+            <li><span class="skill-tag">RAG</span></li>
+            <li><span class="skill-tag">OpenAI API</span></li>
+            <li><span class="skill-tag">Prompt Engineering</span></li>
+          </ul>
+        </div>
+
+        <div class="skill-card" data-delay="100">
+          <div class="skill-icon">🐍</div>
+          <h3>Python / Backend</h3>
+          <ul>
+            <li><span class="skill-tag">Python</span></li>
+            <li><span class="skill-tag">FastAPI</span></li>
+            <li><span class="skill-tag">Gradio</span></li>
+            <li><span class="skill-tag">Jupyter</span></li>
+          </ul>
+        </div>
+
+        <div class="skill-card" data-delay="200">
+          <div class="skill-icon">👁️</div>
+          <h3>Computer Vision</h3>
+          <ul>
+            <li><span class="skill-tag">OpenCV</span></li>
+            <li><span class="skill-tag">Object Detection</span></li>
+            <li><span class="skill-tag">CUDA / GPU</span></li>
+            <li><span class="skill-tag">Multimodal</span></li>
+          </ul>
+        </div>
+
+        <div class="skill-card" data-delay="300">
+          <div class="skill-icon">📱</div>
+          <h3>Mobile / Other</h3>
+          <ul>
+            <li><span class="skill-tag">Kotlin</span></li>
+            <li><span class="skill-tag">Android</span></li>
+            <li><span class="skill-tag">Git / GitHub</span></li>
+            <li><span class="skill-tag">Docker</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects" class="section section-dark">
+    <div class="section-inner">
+      <h2 class="section-title"><span class="accent">//</span> Projects</h2>
+      <div class="projects-grid">
+
+        <article class="project-card" data-delay="0">
+          <div class="project-header">
+            <span class="project-number">01</span>
+            <div class="project-links">
+              <a href="https://github.com/maimaityyy" target="_blank" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55v-2c-3.19.69-3.86-1.54-3.86-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.53-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.63 1.58.24 2.75.12 3.04.74.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55C20.21 21.38 23.5 17.08 23.5 12 23.5 5.73 18.27.5 12 .5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Smart Alarm App</h3>
+          <p class="project-desc">
+            GoogleカレンダーAPIと連携し、予定に基づいて自動でアラームを設定するAndroidアプリ。
+            Text-to-Speechで予定内容を読み上げる機能も実装し、朝の準備を効率化。
+          </p>
+          <div class="project-tags">
+            <span>Kotlin</span>
+            <span>Android</span>
+            <span>Google Calendar API</span>
+            <span>TTS</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-delay="150">
+          <div class="project-header">
+            <span class="project-number">02</span>
+            <div class="project-links">
+              <a href="https://github.com/maimaityyy" target="_blank" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55v-2c-3.19.69-3.86-1.54-3.86-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.53-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.63 1.58.24 2.75.12 3.04.74.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55C20.21 21.38 23.5 17.08 23.5 12 23.5 5.73 18.27.5 12 .5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">AI Product Analyzer</h3>
+          <p class="project-desc">
+            Amazon商品データをスクレイピングし、OpenAI APIで情報抽出・分析するWebアプリ。
+            GradioによるUIで、エンジニア以外でも直感的に操作できるインターフェースを実現。
+          </p>
+          <div class="project-tags">
+            <span>Python</span>
+            <span>OpenAI API</span>
+            <span>Gradio</span>
+            <span>Scraping</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-delay="300">
+          <div class="project-header">
+            <span class="project-number">03</span>
+            <div class="project-links">
+              <a href="https://github.com/maimaityyy" target="_blank" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55v-2c-3.19.69-3.86-1.54-3.86-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.53-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.63 1.58.24 2.75.12 3.04.74.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55C20.21 21.38 23.5 17.08 23.5 12 23.5 5.73 18.27.5 12 .5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Computer Vision Research</h3>
+          <p class="project-desc">
+            実映像データを用いた物体検出・行動解析プロジェクト。
+            データ収集から前処理・モデル学習・精度検証まで一貫して実装し、
+            マルチメディア研究室での研究に応用。
+          </p>
+          <div class="project-tags">
+            <span>Python</span>
+            <span>Computer Vision</span>
+            <span>CUDA</span>
+            <span>OpenCV</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="section">
+    <div class="section-inner contact-inner">
+      <h2 class="section-title"><span class="accent">//</span> Contact</h2>
+      <p class="contact-lead">
+        お仕事・研究コラボ・技術的な話など、お気軽にご連絡ください。
+      </p>
+      <div class="contact-links">
+        <a href="https://github.com/maimaityyy" target="_blank" class="contact-card">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55v-2c-3.19.69-3.86-1.54-3.86-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.53-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.63 1.58.24 2.75.12 3.04.74.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55C20.21 21.38 23.5 17.08 23.5 12 23.5 5.73 18.27.5 12 .5z"/></svg>
+          <span>GitHub</span>
+          <small>@maimaityyy</small>
+        </a>
+        <a href="mailto:maito923923@gmail.com" class="contact-card">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>Email</span>
+          <small>maito923923@gmail.com</small>
+        </a>
+        <a href="https://x.com/Maimai771695" target="_blank" class="contact-card">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <span>X / Twitter</span>
+          <small>@Maimai771695</small>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>© 2026 Maito Sasaki (佐々木 舞人) — Built with vanilla code &amp; curiosity</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -102,13 +102,13 @@
           </p>
           <p>
             現在は株式会社 <strong>neoAI</strong> でAIエンジニアとして勤務しながら、
-            LLMの実用化・マルチモーダルAIの研究に取り組んでいます。
+            NeRF（Neural Radiance Fields）を用いた3次元再構成の研究に取り組んでいます。
             2026年4月からは <strong>NVIDIA学生アンバサダー</strong>として、
             最先端のGPUコンピューティング技術の普及活動にも携わっています。
           </p>
           <p>
-            「研究とプロダクト開発の両立」を大切にし、
-            学術的な知見を実際のサービスに活かすエンジニアリングを目指しています。
+            「挑戦することで見える景色がある」を信条に、未知の技術や役割にも臆せず飛び込み、
+            研究とプロダクト開発の両面から価値を生み出すエンジニアを目指しています。
           </p>
           <div class="about-meta">
             <div class="meta-item">
@@ -168,17 +168,19 @@
           <div class="timeline-card">
             <div class="tl-header">
               <div class="tl-badge badge-neo-tl">neoAI</div>
-              <span class="tl-period">現在</span>
+              <span class="tl-period">2024.06 — 現在</span>
             </div>
-            <h3 class="tl-title">AIエンジニア</h3>
-            <p class="tl-org">株式会社 neoAI</p>
+            <h3 class="tl-title">AIエンジニア / サブプロジェクトマネージャー</h3>
+            <p class="tl-org">株式会社 neoAI（東京大学松尾研究室発スタートアップ）</p>
             <p class="tl-desc">
-              LLMを活用したプロダクト開発・システム設計に従事。
-              RAGシステムの構築、プロンプトエンジニアリング、
-              AIアプリケーションのPoC開発から本番運用まで幅広く担当。
+              エンタメ領域の企業との画像生成AI共同研究プロジェクトに参画。
+              GCP・Vast.aiなどのGPUクラウドインフラの管理・運用を担当。
+              複数並行するテーマのうち1テーマのリードを3ヶ月間務め、
+              クライアントから「他社比で圧倒的に高品質」との評価を獲得。
+              プロジェクトは現在も継続中。
             </p>
             <div class="tl-tags">
-              <span>LLM</span><span>RAG</span><span>Python</span><span>AI System Design</span>
+              <span>Python</span><span>ComfyUI</span><span>GCP</span><span>Vast.ai</span><span>GPU Infrastructure</span><span>Project Management</span>
             </div>
           </div>
         </div>
@@ -188,16 +190,39 @@
           <div class="timeline-card">
             <div class="tl-header">
               <div class="tl-badge badge-univ-tl">TUT</div>
-              <span class="tl-period">2025.04 — 現在</span>
+              <span class="tl-period">2026.04 — 現在</span>
             </div>
             <h3 class="tl-title">修士研究員 (M1)</h3>
-            <p class="tl-org">東京工科大学大学院 マルチメディアデータモデリング研究室</p>
+            <p class="tl-org">東京工科大学大学院 バイオ情報・メディア研究科 CS専攻 マルチメディアデータモデリング研究室</p>
             <p class="tl-desc">
-              バイオ情報・メディア研究科 コンピュータサイエンス専攻に在籍。
-              マルチメディアデータのモデリング・解析に関する研究を推進中。
+              Neural Radiance Fields（NeRF）を用いた3次元再構成の研究に取り組む。
+              少数枚の入力画像から高品質な3Dシーンを再構成するFrugalNeRFをベースに、
+              Supervoxelと勾配マスキングを組み合わせたノイズ低減手法を提案。
+              MIRU等の国内学会への投稿を視野に論文化を進めている。
             </p>
             <div class="tl-tags">
-              <span>Multimedia AI</span><span>Data Modeling</span><span>Research</span>
+              <span>NeRF</span><span>PyTorch</span><span>3D Reconstruction</span><span>Computer Vision</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-delay="450">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div class="tl-badge badge-univ-tl">TUT</div>
+              <span class="tl-period">2022.04 — 2026.03</span>
+            </div>
+            <h3 class="tl-title">学部生（コンピュータサイエンス学部）</h3>
+            <p class="tl-org">東京工科大学 コンピュータサイエンス学部 コンピュータサイエンス学科 人工知能専攻</p>
+            <p class="tl-desc">
+              マルチメディアデータモデリング研究室にてNeRFを用いた3次元再構成の研究に従事。
+              学部3年次にはStable Diffusionを活用した画像生成Slackbotを開発し、
+              Mac M2 Metal GPUの最適化により生成時間を数分から約20秒に短縮。
+              本取り組みが評価され学部長賞を受賞。
+            </p>
+            <div class="tl-tags">
+              <span>Python</span><span>Stable Diffusion</span><span>NeRF</span><span>Deep Learning</span>
             </div>
           </div>
         </div>
@@ -297,16 +322,18 @@
               </a>
             </div>
           </div>
-          <h3 class="project-title">AI Product Analyzer</h3>
+          <h3 class="project-title">Stable Diffusion Slackbot <span style="font-size:0.75rem;color:#76c442;">🏆 学部長賞</span></h3>
           <p class="project-desc">
-            Amazon商品データをスクレイピングし、OpenAI APIで情報抽出・分析するWebアプリ。
-            GradioによるUIで、エンジニア以外でも直感的に操作できるインターフェースを実現。
+            Stable Diffusionを活用した画像生成Slackbotを開発。
+            Mac M2チップのMetal GPUを活用した推論最適化により、
+            画像生成時間を従来の数分から約20秒へと大幅に短縮。
+            研究室・ゼミ内での実用性と技術的工夫が評価され学部長賞を受賞。
           </p>
           <div class="project-tags">
             <span>Python</span>
-            <span>OpenAI API</span>
-            <span>Gradio</span>
-            <span>Scraping</span>
+            <span>Stable Diffusion</span>
+            <span>Metal GPU</span>
+            <span>Slack API</span>
           </div>
         </article>
 
@@ -319,17 +346,19 @@
               </a>
             </div>
           </div>
-          <h3 class="project-title">Computer Vision Research</h3>
+          <h3 class="project-title">FrugalNeRF 改良研究</h3>
           <p class="project-desc">
-            実映像データを用いた物体検出・行動解析プロジェクト。
-            データ収集から前処理・モデル学習・精度検証まで一貫して実装し、
-            マルチメディア研究室での研究に応用。
+            少数枚の入力画像から高品質な3Dシーンを再構成するFrugalNeRFをベースに、
+            ノイズ低減手法を研究。SLICセグメンテーションによるSupervoxelと
+            勾配マスキングを組み合わせ、少数視点での再構成精度の改善に取り組む。
+            MIRU等の国内学会への投稿を視野に論文化を進めている。
           </p>
           <div class="project-tags">
             <span>Python</span>
-            <span>Computer Vision</span>
+            <span>PyTorch</span>
+            <span>NeRF</span>
+            <span>3D Reconstruction</span>
             <span>CUDA</span>
-            <span>OpenCV</span>
           </div>
         </article>
 

@@ -3,401 +3,361 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | 佐々木 舞人</title>
-  <meta name="description" content="佐々木舞人 — AI Engineer at neoAI / NVIDIA Student Ambassador / 東京工科大学大学院 M1" />
-  <link rel="stylesheet" href="css/style.css" />
+  <title>MAITO SASAKI // Portfolio</title>
+  <meta name="description" content="佐々木舞人 東京工科大学大学院 M1 コンピュータビジョン 自由視点画像生成 3次元再構成 NVIDIA学生アンバサダー 株式会社neoAI AIエンジニア" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- ── CANVAS BACKGROUND ── -->
-  <canvas id="bg-canvas"></canvas>
+  <!-- ambient layers -->
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient-grid"></div>
+    <div class="ambient-ring"></div>
+    <div class="ambient-scan"></div>
+    <canvas id="starfield"></canvas>
+  </div>
 
-  <!-- ── NAV ── -->
-  <nav id="navbar">
-    <div class="nav-logo"><span class="bracket">[</span>Maito Sasaki<span class="bracket">]</span></div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger" aria-label="menu">&#9776;</button>
-  </nav>
+  <!-- ── HEADER ── -->
+  <header class="command-header" id="navbar">
+    <a class="identity" href="#hero" aria-label="Top">
+      <span class="sigil"><i></i><b></b></span>
+      <span class="brand">
+        <strong>MAITO SASAKI</strong>
+        <span>PORTFOLIO // OBSERVATORY</span>
+      </span>
+    </a>
 
-  <!-- ── HERO ── -->
-  <section id="hero">
-    <div class="hero-content">
-      <p class="hero-greeting">Hello, World! 👋</p>
-      <h1 class="hero-name">
-        <span class="name-en">Maito Sasaki</span>
-        <span class="name-ja">佐々木 舞人</span>
-      </h1>
-      <h2 class="hero-title">
-        <span id="typed-text"></span><span class="cursor">|</span>
-      </h2>
-      <p class="hero-desc">
-        AIエンジニア &amp; 研究者として、最先端のLLM・マルチメディアAI技術を<br />
-        実世界のプロダクトに落とし込むことを追求しています。
-      </p>
-      <div class="hero-badges">
-        <span class="hero-badge badge-nvidia">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="3"/></svg>
-          NVIDIA Student Ambassador
-        </span>
-        <span class="hero-badge badge-neo">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>
-          AI Engineer @ neoAI
-        </span>
+    <nav class="nav-deck" aria-label="Sections">
+      <ul class="nav-links">
+        <li><a href="#about"><em>01</em>ABOUT</a></li>
+        <li><a href="#experience"><em>02</em>EXPERIENCE</a></li>
+        <li><a href="#workshop"><em>03</em>WORKSHOP</a></li>
+        <li><a href="#skills"><em>04</em>SKILLS</a></li>
+        <li><a href="#projects"><em>05</em>PROJECTS</a></li>
+        <li><a href="#contact"><em>06</em>CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-right">
+      <span class="clock"><small>JST</small><strong id="clock">--:--:--</strong></span>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang="ja" aria-pressed="true">JA</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
-      </div>
-      <div class="hero-scroll-hint">scroll down ↓</div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
+  </header>
 
-    <div class="hero-visual">
-      <div class="code-window">
-        <div class="code-header">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-          <span class="code-title">profile.py</span>
+  <main>
+    <!-- ── HERO ── -->
+    <section id="hero" class="hero">
+      <div class="hero-main">
+        <p class="eyebrow"><span class="pulse"></span>PORTFOLIO / CLASS OF 2028</p>
+        <h1 class="hero-name">
+          <span class="name-en">MAITO<br />SASAKI</span>
+          <span class="name-ja">佐々木 舞人</span>
+        </h1>
+        <p class="hero-role"><span class="prompt">&gt;</span> <span id="typed-text"></span><span class="cursor">_</span></p>
+        <p class="hero-desc" data-i18n="hero.desc">コンピュータビジョン領域 特に自由視点画像生成と3次元再構成の研究に従事<br />研究と企業向けAIX支援の実務の両面から 先端技術の社会実装を志向</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">VIEW PROJECTS <span>→</span></a>
+          <a href="#contact" class="btn btn-ghost">CONTACT</a>
         </div>
-        <pre class="code-body"><code><span class="kw">class</span> <span class="cls">MaitoSasaki</span>:
-    <span class="var">name</span>     = <span class="str">"佐々木 舞人"</span>
-    <span class="var">role</span>     = <span class="str">"AI Engineer"</span>
-    <span class="var">company</span>  = <span class="str">"株式会社 neoAI"</span>
-    <span class="var">program</span>  = <span class="str">"東京工科大学大学院 M1"</span>
-    <span class="var">lab</span>      = <span class="str">"マルチメディアデータモデリング"</span>
-    <span class="var">nvidia</span>   = <span class="str">"Student Ambassador 🟢"</span>
-    <span class="var">interests</span> = [
-        <span class="str">"LLM / GenAI"</span>,
-        <span class="str">"Computer Vision"</span>,
-        <span class="str">"Multimodal AI"</span>,
-    ]</code></pre>
       </div>
-    </div>
-  </section>
 
-  <!-- ── ABOUT ── -->
-  <section id="about" class="section">
-    <div class="section-inner">
-      <h2 class="section-title"><span class="accent">//</span> About Me</h2>
+      <aside class="panel readout">
+        <div class="panel-head">
+          <span>PROFILE</span>
+          <span class="chip" data-i18n="ro.chip">2028.03 修了予定</span>
+        </div>
+        <dl class="readout-list">
+          <div><dt><span data-i18n="ro.nameL">氏名</span><small>NAME</small></dt><dd data-i18n="ro.name">佐々木 舞人<span>Maito Sasaki</span></dd></div>
+          <div><dt><span data-i18n="ro.schoolL">大学院</span><small>SCHOOL</small></dt><dd data-i18n="ro.school">東京工科大学大学院<span>バイオ・情報メディア研究科 コンピュータサイエンス専攻 修士1年</span></dd></div>
+          <div><dt><span data-i18n="ro.labL">研究室</span><small>LAB</small></dt><dd data-i18n="ro.lab">マルチメディアデータモデリング研究室</dd></div>
+          <div><dt><span data-i18n="ro.researchL">研究</span><small>RESEARCH</small></dt><dd data-i18n="ro.research">コンピュータビジョン<span>自由視点画像生成・3次元再構成</span></dd></div>
+          <div><dt><span data-i18n="ro.workL">勤務</span><small>WORK</small></dt><dd data-i18n="ro.work">株式会社neoAI AIエンジニア<span>2024.06〜</span></dd></div>
+          <div><dt><span data-i18n="ro.actL">課外活動</span><small>ACTIVITY</small></dt><dd data-i18n="ro.act">NVIDIA学生アンバサダー<span>2026.04〜</span></dd></div>
+        </dl>
+        <div class="readout-foot">
+          <span><span data-i18n="ro.intL">関心分野</span><small>INTERESTS</small></span>
+          <div class="tags"><span>Computer Vision</span><span>Novel View Synthesis</span><span>3D Reconstruction</span><span>Generative AI</span><span>XR</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ── ABOUT ── -->
+    <section id="about" class="section">
+      <header class="section-head">
+        <span class="section-index">01</span>
+        <h2>ABOUT</h2>
+        <span class="section-rule"></span>
+        <span class="section-meta">PROFILE</span>
+      </header>
+
       <div class="about-grid">
-        <div class="about-photo">
-          <div class="photo-placeholder">
-            <!-- 写真があれば <img src="photo.jpg" alt="佐々木舞人"> に変えてください -->
-            <div class="avatar-letters">舞人</div>
-          </div>
+        <div class="panel about-text">
+          <p data-i18n="about.p1">東京工科大学大学院 バイオ・情報メディア研究科 コンピュータサイエンス専攻 修士1年<br />マルチメディアデータモデリング研究室所属</p>
+          <p data-i18n="about.p2">株式会社 <strong>neoAI</strong> のAIエンジニアとして企業向けAIX支援に従事<br />研究テーマはコンピュータビジョン 特に自由視点画像生成と3次元再構成</p>
+          <p data-i18n="about.p3">2026年4月より <strong>NVIDIA学生アンバサダー</strong> として活動<br />NVIDIA研究員の技術指導のもと先端技術を習得し 学生向けワークショップにて発表<br />未知の技術や役割にも積極的に挑み 研究とプロダクト開発の両面から価値を創出するエンジニアを志向</p>
         </div>
-        <div class="about-text">
-          <p>
-            東京工科大学大学院 バイオ・情報メディア研究科 コンピュータサイエンス専攻、
-            マルチメディアデータモデリング研究室に所属する修士1年（M1）です。
-          </p>
-          <p>
-            現在は株式会社 <strong>neoAI</strong> でAIエンジニアとして勤務しながら、
-            NeRF（Neural Radiance Fields）を用いた3次元再構成の研究に取り組んでいます。
-            2026年4月からは <strong>NVIDIA学生アンバサダー</strong>として、
-            最先端のGPUコンピューティング技術の普及活動にも携わっています。
-          </p>
-          <p>
-            「挑戦することで見える景色がある」を信条に、未知の技術や役割にも臆せず飛び込み、
-            研究とプロダクト開発の両面から価値を生み出すエンジニアを目指しています。
-          </p>
-          <div class="about-meta">
-            <div class="meta-item">
-              <span class="meta-icon">🎓</span>
-              <span>東京工科大学大学院 バイオ・情報メディア研究科 CS専攻 M1</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-icon">🔬</span>
-              <span>マルチメディアデータモデリング研究室</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-icon">💼</span>
-              <span>AIエンジニア @ 株式会社 neoAI</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-icon">🟢</span>
-              <span>NVIDIA Student Ambassador (2026.04〜)</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-icon">📍</span>
-              <span>Tokyo, Japan</span>
-            </div>
-          </div>
+
+        <div class="panel about-meta">
+          <div class="panel-head"><span>IDENTITY</span><span class="chip">TOKYO, JP</span></div>
+          <ul>
+            <li><span>EDU</span><em data-i18n="id.edu">東京工科大学大学院 バイオ・情報メディア研究科 コンピュータサイエンス専攻 修士1年</em></li>
+            <li><span>LAB</span><em data-i18n="id.lab">マルチメディアデータモデリング研究室</em></li>
+            <li><span>WORK</span><em data-i18n="id.work">AIエンジニア @ 株式会社neoAI</em></li>
+            <li><span>NVIDIA</span><em data-i18n="id.nv">NVIDIA学生アンバサダー（2026.04〜）</em></li>
+            <li><span>BASE</span><em>Tokyo, Japan</em></li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── EXPERIENCE ── -->
-  <section id="experience" class="section section-dark">
-    <div class="section-inner">
-      <h2 class="section-title"><span class="accent">//</span> Experience</h2>
+    <!-- ── EXPERIENCE ── -->
+    <section id="experience" class="section">
+      <header class="section-head">
+        <span class="section-index">02</span>
+        <h2>EXPERIENCE</h2>
+        <span class="section-rule"></span>
+        <span class="section-meta">4 ENTRIES</span>
+      </header>
+
       <div class="timeline">
-
-        <div class="timeline-item" data-delay="0">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="tl-header">
-              <div class="tl-badge badge-nvidia-tl">NVIDIA</div>
-              <span class="tl-period">2026.04 — 現在</span>
-            </div>
-            <h3 class="tl-title">NVIDIA Student Ambassador</h3>
-            <p class="tl-org">NVIDIA Corporation</p>
-            <p class="tl-desc">
-              NVIDIAの学生アンバサダープログラムに選出。
-              CUDA・GPU並列計算・生成AI技術の学生コミュニティへの普及活動、
-              ハンズオンワークショップの企画・運営を担当。
-            </p>
-            <div class="tl-tags">
-              <span>CUDA</span><span>GPU Computing</span><span>GenAI</span><span>Community</span>
-            </div>
+        <article class="panel tl-item reveal">
+          <div class="tl-side">
+            <span class="chip ok"><i></i>ACTIVE</span>
+            <span class="tl-period">2026.04 — NOW</span>
+            <span class="tl-org-code">NVIDIA</span>
           </div>
-        </div>
-
-        <div class="timeline-item" data-delay="150">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="tl-header">
-              <div class="tl-badge badge-neo-tl">neoAI</div>
-              <span class="tl-period">2024.06 — 現在</span>
-            </div>
-            <h3 class="tl-title">AIエンジニア / サブプロジェクトマネージャー</h3>
-            <p class="tl-org">株式会社 neoAI（東京大学松尾研究室発スタートアップ）</p>
-            <p class="tl-desc">
-              エンタメ領域の企業との画像生成AI共同研究プロジェクトに参画。
-              GCP・Vast.aiなどのGPUクラウドインフラの管理・運用を担当。
-              複数並行するテーマのうち1テーマのリードを3ヶ月間務め、
-              クライアントから「他社比で圧倒的に高品質」との評価を獲得。
-              プロジェクトは現在も継続中。
-            </p>
-            <div class="tl-tags">
-              <span>Python</span><span>ComfyUI</span><span>GCP</span><span>Vast.ai</span><span>GPU Infrastructure</span><span>Project Management</span>
-            </div>
+          <div class="tl-body">
+            <h3 data-i18n="exp.nv.t">NVIDIA学生アンバサダー</h3>
+            <p class="tl-org" data-i18n="exp.nv.o">NVIDIA 学生アンバサダープログラム（AIコース）</p>
+            <ul class="points" data-i18n="exp.nv.d"><li>国内大学を対象とした選抜制の人材育成プログラムに選出</li><li>NVIDIA研究員による直接の技術指導のもと AI・データサイエンス・デジタルツイン等の先端技術を習得</li><li>2026年8月 東京工科大学 八王子キャンパスでのワークショップにてinstant-ngpを用いたメッシュ化について発表</li></ul>
+            <div class="tags"><span>GPU Computing</span><span>NeRF / instant-ngp</span><span>3D Mesh</span><span>Community</span></div>
+            <a class="ext-link" href="https://www.teu.ac.jp/information/2026.html?id=216" target="_blank" rel="noopener"><span data-i18n="exp.nv.link">東京工科大学 公式サイトの紹介記事</span> ↗</a>
           </div>
-        </div>
+        </article>
 
-        <div class="timeline-item" data-delay="300">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="tl-header">
-              <div class="tl-badge badge-univ-tl">TUT</div>
-              <span class="tl-period">2026.04 — 現在</span>
-            </div>
-            <h3 class="tl-title">修士研究員 (M1)</h3>
-            <p class="tl-org">東京工科大学大学院 バイオ・情報メディア研究科 CS専攻 マルチメディアデータモデリング研究室</p>
-            <p class="tl-desc">
-              Neural Radiance Fields（NeRF）を用いた3次元再構成の研究に取り組む。
-              少数枚の入力画像から高品質な3Dシーンを再構成するFrugalNeRFをベースに、
-              Supervoxelと勾配マスキングを組み合わせたノイズ低減手法を提案。
-              国際会議への投稿を視野に論文化を進めている。
-            </p>
-            <div class="tl-tags">
-              <span>NeRF</span><span>PyTorch</span><span>3D Reconstruction</span><span>Computer Vision</span>
-            </div>
+        <article class="panel tl-item reveal">
+          <div class="tl-side">
+            <span class="chip ok"><i></i>ACTIVE</span>
+            <span class="tl-period">2024.06 — NOW</span>
+            <span class="tl-org-code">neoAI</span>
           </div>
-        </div>
-
-        <div class="timeline-item" data-delay="450">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="tl-header">
-              <div class="tl-badge badge-univ-tl">TUT</div>
-              <span class="tl-period">2022.04 — 2026.03</span>
-            </div>
-            <h3 class="tl-title">学部生（コンピュータサイエンス学部）</h3>
-            <p class="tl-org">東京工科大学 コンピュータサイエンス学部 コンピュータサイエンス学科 人工知能専攻</p>
-            <p class="tl-desc">
-              マルチメディアデータモデリング研究室にてNeRFを用いた3次元再構成の研究に従事。
-              学部3年次にはStable Diffusionを活用した画像生成Slackbotを開発し、
-              Mac M2 Metal GPUの最適化により生成時間を数分から約20秒に短縮。
-              本取り組みが評価され学部長賞を受賞。
-            </p>
-            <div class="tl-tags">
-              <span>Python</span><span>Stable Diffusion</span><span>NeRF</span><span>Deep Learning</span>
-            </div>
+          <div class="tl-body">
+            <h3 data-i18n="exp.neo.t">AIエンジニア / サブプロジェクトマネージャー</h3>
+            <p class="tl-org" data-i18n="exp.neo.o">株式会社 neoAI（東京大学松尾研究室発スタートアップ）</p>
+            <ul class="points" data-i18n="exp.neo.d"><li>課題整理やAI活用方針の策定といったコンサルティングから AIを用いたシステムの開発・導入による業務効率化まで 企業のAIX（AIトランスフォーメーション）を一貫して支援</li><li>最長期間携わったエンタメ領域企業との画像生成AI共同研究プロジェクトにて 1テーマのリードを約1年間担当</li><li>技術開発に加え クライアントとのコミュニケーションおよびプロジェクトマネジメントを担当し 他社を大きく上回る品質との評価を獲得</li><li>同プロジェクトにおけるGCP・Vast.ai等のGPUクラウドインフラの管理・運用を担当</li></ul>
+            <div class="tags"><span>AIX</span><span>Generative AI</span><span>ComfyUI</span><span>Project Management</span><span>Client Communication</span><span>GCP / Vast.ai</span></div>
           </div>
-        </div>
+        </article>
 
+        <article class="panel tl-item reveal">
+          <div class="tl-side">
+            <span class="chip ok"><i></i>ACTIVE</span>
+            <span class="tl-period">2026.04 — NOW</span>
+            <span class="tl-org-code">TUT</span>
+          </div>
+          <div class="tl-body">
+            <h3 data-i18n="exp.ms.t">修士課程（M1）</h3>
+            <p class="tl-org" data-i18n="exp.ms.o">東京工科大学大学院 バイオ・情報メディア研究科 コンピュータサイエンス専攻 マルチメディアデータモデリング研究室</p>
+            <ul class="points" data-i18n="exp.ms.d"><li>コンピュータビジョン 特に自由視点画像生成と3次元再構成を研究</li><li>少数枚の入力画像から3Dシーンを再構成するFrugalNeRFを基盤に 再構成時に生じるノイズ（floater）の低減手法を研究</li><li>国際学会への投稿に向け論文化を推進</li></ul>
+            <div class="tags"><span>Computer Vision</span><span>Novel View Synthesis</span><span>NeRF</span><span>PyTorch</span></div>
+          </div>
+        </article>
+
+        <article class="panel tl-item reveal">
+          <div class="tl-side">
+            <span class="chip done">COMPLETE</span>
+            <span class="tl-period">2022.04 — 2026.03</span>
+            <span class="tl-org-code">TUT</span>
+          </div>
+          <div class="tl-body">
+            <h3 data-i18n="exp.bs.t">学部（コンピュータサイエンス学部）</h3>
+            <p class="tl-org" data-i18n="exp.bs.o">東京工科大学 コンピュータサイエンス学部 コンピュータサイエンス学科 人工知能専攻</p>
+            <ul class="points" data-i18n="exp.bs.d"><li>マルチメディアデータモデリング研究室にてNeRFを用いた3次元再構成を研究</li><li>Stable Diffusionを用いた画像生成Slackbotを開発し Apple M2のMetal GPU最適化により生成時間を数分から約20秒に短縮</li><li>上記の取り組みにより学部長賞を受賞</li></ul>
+            <div class="tags"><span>Python</span><span>Stable Diffusion</span><span>NeRF</span><span>Deep Learning</span></div>
+          </div>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── SKILLS ── -->
-  <section id="skills" class="section">
-    <div class="section-inner">
-      <h2 class="section-title"><span class="accent">//</span> Skills</h2>
+    <!-- ── WORKSHOP ── -->
+    <section id="workshop" class="section">
+      <header class="section-head">
+        <span class="section-index">03</span>
+        <h2>WORKSHOP</h2>
+        <span class="section-rule"></span>
+        <span class="section-meta">NVIDIA STUDENT AMBASSADOR</span>
+      </header>
+
+      <div class="workshop-grid">
+        <figure class="panel photo-frame">
+          <div class="photo-hud">
+            <span class="hud-corner tl"></span><span class="hud-corner tr"></span>
+            <span class="hud-corner bl"></span><span class="hud-corner br"></span>
+            <img src="assets/workshop/P8292388.jpg" alt="NVIDIA Student Ambassador Workshop, 2026-08-29" />
+            <span class="hud-label"><i></i>ARCHIVE // 2026.08.29</span>
+          </div>
+          <figcaption>
+            <span>2026.08.29</span><em data-i18n="ws.cap">NVIDIA学生アンバサダーワークショップ（東京工科大学 八王子キャンパス）</em>
+          </figcaption>
+        </figure>
+
+        <div class="workshop-side">
+          <p class="workshop-lead" data-i18n="ws.lead">2026年8月29日 東京工科大学 八王子キャンパスにて開催のNVIDIA学生アンバサダーワークショップ AIセッションで発表<br />演題は <strong>instant-ngpを用いたメッシュ化</strong><br />NeRFの高速実装であるinstant-ngpを用い 画像から3Dメッシュを生成する手法を紹介</p>
+          <div class="note-grid">
+            <div class="panel note reveal"><span>01</span><h3>TECHNOLOGY</h3><p data-i18n="ws.n1">instant-ngpやNeRFなど 画像から3次元形状を得る技術を実際の手順とともに紹介</p></div>
+            <div class="panel note reveal"><span>02</span><h3>COMMUNICATION</h3><p data-i18n="ws.n2">専門技術に初めて触れる参加者にも理解できるよう構成を整理して説明</p></div>
+            <div class="panel note reveal"><span>03</span><h3>COMMUNITY</h3><p data-i18n="ws.n3">全国の大学から選抜された学生アンバサダーが企画・運営するワークショップの場づくりに参加</p></div>
+          </div>
+          <a class="panel link-card" href="https://www.teu.ac.jp/information/2026.html?id=216" target="_blank" rel="noopener">
+            <span class="lc-label" data-i18n="ws.srcL">東京工科大学 公式サイト</span>
+            <strong data-i18n="ws.src">ワークショップ開催報告を読む</strong>
+            <span class="lc-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SKILLS ── -->
+    <section id="skills" class="section">
+      <header class="section-head">
+        <span class="section-index">04</span>
+        <h2>SKILLS</h2>
+        <span class="section-rule"></span>
+        <span class="section-meta">STACK</span>
+      </header>
+
       <div class="skills-grid">
-
-        <div class="skill-card" data-delay="0">
-          <div class="skill-icon">🤖</div>
-          <h3>AI / LLM</h3>
-          <ul>
-            <li><span class="skill-tag">LLM Integration</span></li>
-            <li><span class="skill-tag">RAG</span></li>
-            <li><span class="skill-tag">OpenAI API</span></li>
-            <li><span class="skill-tag">Prompt Engineering</span></li>
-          </ul>
+        <div class="panel skill reveal">
+          <div class="panel-head"><span>3D / VISION</span><span class="node">N-01</span></div>
+          <div class="tags"><span>NeRF</span><span>3D Reconstruction</span><span>OpenCV</span><span>Blender</span><span>Unreal Engine</span></div>
         </div>
-
-        <div class="skill-card" data-delay="100">
-          <div class="skill-icon">🐍</div>
-          <h3>Python / Backend</h3>
-          <ul>
-            <li><span class="skill-tag">Python</span></li>
-            <li><span class="skill-tag">FastAPI</span></li>
-            <li><span class="skill-tag">Gradio</span></li>
-            <li><span class="skill-tag">Jupyter</span></li>
-          </ul>
+        <div class="panel skill reveal">
+          <div class="panel-head"><span>ML / GENAI</span><span class="node">N-02</span></div>
+          <div class="tags"><span>PyTorch</span><span>Stable Diffusion</span><span>ComfyUI</span><span>LLM</span><span>RAG</span></div>
         </div>
-
-        <div class="skill-card" data-delay="200">
-          <div class="skill-icon">👁️</div>
-          <h3>Computer Vision</h3>
-          <ul>
-            <li><span class="skill-tag">OpenCV</span></li>
-            <li><span class="skill-tag">Object Detection</span></li>
-            <li><span class="skill-tag">CUDA / GPU</span></li>
-            <li><span class="skill-tag">Multimodal</span></li>
-          </ul>
+        <div class="panel skill reveal">
+          <div class="panel-head"><span>INFRA / GPU</span><span class="node">N-03</span></div>
+          <div class="tags"><span>CUDA / GPU</span><span>GCP</span><span>Vast.ai</span><span>Linux</span><span>Docker</span></div>
         </div>
-
-        <div class="skill-card" data-delay="300">
-          <div class="skill-icon">📱</div>
-          <h3>Mobile / Other</h3>
-          <ul>
-            <li><span class="skill-tag">Kotlin</span></li>
-            <li><span class="skill-tag">Android</span></li>
-            <li><span class="skill-tag">Git / GitHub</span></li>
-            <li><span class="skill-tag">Docker</span></li>
-          </ul>
+        <div class="panel skill reveal">
+          <div class="panel-head"><span>LANG / TOOLS</span><span class="node">N-04</span></div>
+          <div class="tags"><span>Python</span><span>NumPy</span><span>Kotlin</span><span>Android</span><span>Git / GitHub</span></div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── PROJECTS ── -->
-  <section id="projects" class="section section-dark">
-    <div class="section-inner">
-      <h2 class="section-title"><span class="accent">//</span> Projects</h2>
+    <!-- ── PROJECTS ── -->
+    <section id="projects" class="section">
+      <header class="section-head">
+        <span class="section-index">05</span>
+        <h2>PROJECTS</h2>
+        <span class="section-rule"></span>
+        <span class="section-meta">3 BUILDS</span>
+      </header>
+
       <div class="projects-grid">
-
-        <article class="project-card" data-delay="0">
-          <div class="project-header">
-            <span class="project-number">01</span>
-            <div class="project-links">
-              <a href="https://github.com/maimaityyy" target="_blank" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55v-2c-3.19.69-3.86-1.54-3.86-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.53-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.63 1.58.24 2.75.12 3.04.74.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55C20.21 21.38 23.5 17.08 23.5 12 23.5 5.73 18.27.5 12 .5z"/></svg>
-              </a>
-            </div>
+        <article class="panel project reveal">
+          <div class="panel-head">
+            <span>PRJ-01 // RESEARCH</span>
+            <span class="chip ok"><i></i>IN PROGRESS</span>
           </div>
-          <h3 class="project-title">Smart Alarm App</h3>
-          <p class="project-desc">
-            GoogleカレンダーAPIと連携し、予定に基づいて自動でアラームを設定するAndroidアプリ。
-            Text-to-Speechで予定内容を読み上げる機能も実装し、朝の準備を効率化。
-          </p>
-          <div class="project-tags">
-            <span>Kotlin</span>
-            <span>Android</span>
-            <span>Google Calendar API</span>
-            <span>TTS</span>
-          </div>
+          <h3 data-i18n="pj.1.t">FrugalNeRF 改良研究</h3>
+          <ul class="points" data-i18n="pj.1.d"><li>少数枚の入力画像から3Dシーンを再構成するFrugalNeRFを基盤に 空中に浮かぶノイズ（floater）の低減手法を研究</li><li>国際学会への投稿に向け論文化を推進</li></ul>
+          <div class="tags"><span>Python</span><span>PyTorch</span><span>NeRF</span><span>CUDA</span></div>
         </article>
 
-        <article class="project-card" data-delay="150">
-          <div class="project-header">
-            <span class="project-number">02</span>
-            <div class="project-links">
-              <a href="https://github.com/maimaityyy" target="_blank" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55v-2c-3.19.69-3.86-1.54-3.86-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.53-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.63 1.58.24 2.75.12 3.04.74.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55C20.21 21.38 23.5 17.08 23.5 12 23.5 5.73 18.27.5 12 .5z"/></svg>
-              </a>
-            </div>
+        <article class="panel project reveal">
+          <div class="panel-head">
+            <span>PRJ-02 // BOT</span>
+            <span class="chip amber" data-i18n="pj.2.award">学部長賞</span>
           </div>
-          <h3 class="project-title">Stable Diffusion Slackbot <span style="font-size:0.75rem;color:#76c442;">🏆 学部長賞</span></h3>
-          <p class="project-desc">
-            Stable Diffusionを活用した画像生成Slackbotを開発。
-            Mac M2チップのMetal GPUを活用した推論最適化により、
-            画像生成時間を従来の数分から約20秒へと大幅に短縮。
-            研究室・ゼミ内での実用性と技術的工夫が評価され学部長賞を受賞。
-          </p>
-          <div class="project-tags">
-            <span>Python</span>
-            <span>Stable Diffusion</span>
-            <span>Metal GPU</span>
-            <span>Slack API</span>
-          </div>
+          <h3>Stable Diffusion Slackbot</h3>
+          <ul class="points" data-i18n="pj.2.d"><li>Stable Diffusionを用いた画像生成Slackbotを開発</li><li>Apple M2のMetal GPUに最適化した推論により 生成時間を数分から約20秒に短縮</li><li>学部長賞を受賞</li></ul>
+          <div class="tags"><span>Python</span><span>Stable Diffusion</span><span>Metal GPU</span><span>Slack API</span></div>
         </article>
 
-        <article class="project-card" data-delay="300">
-          <div class="project-header">
-            <span class="project-number">03</span>
-            <div class="project-links">
-              <a href="https://github.com/maimaityyy" target="_blank" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55v-2c-3.19.69-3.86-1.54-3.86-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.53-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.63 1.58.24 2.75.12 3.04.74.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55C20.21 21.38 23.5 17.08 23.5 12 23.5 5.73 18.27.5 12 .5z"/></svg>
-              </a>
-            </div>
+        <article class="panel project reveal">
+          <div class="panel-head">
+            <span>PRJ-03 // APP</span>
+            <span class="chip" data-i18n="pj.3.chip">ハッカソン</span>
           </div>
-          <h3 class="project-title">FrugalNeRF 改良研究</h3>
-          <p class="project-desc">
-            少数枚の入力画像から高品質な3Dシーンを再構成するFrugalNeRFをベースに、
-            ノイズ低減手法を研究。SLICセグメンテーションによるSupervoxelと
-            勾配マスキングを組み合わせ、少数視点での再構成精度の改善に取り組む。
-            国際会議への投稿を視野に論文化を進めている。
-          </p>
-          <div class="project-tags">
-            <span>Python</span>
-            <span>PyTorch</span>
-            <span>NeRF</span>
-            <span>3D Reconstruction</span>
-            <span>CUDA</span>
-          </div>
+          <h3>Smart Alarm App</h3>
+          <ul class="points" data-i18n="pj.3.d"><li>ハッカソンにて開発したAndroidアプリ</li><li>Googleカレンダーの予定に基づきアラームを自動設定</li><li>Text-to-Speechによる予定の読み上げ機能を実装</li></ul>
+          <div class="tags"><span>Kotlin</span><span>Android</span><span>Google Calendar API</span><span>TTS</span></div>
         </article>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── CONTACT ── -->
-  <section id="contact" class="section">
-    <div class="section-inner contact-inner">
-      <h2 class="section-title"><span class="accent">//</span> Contact</h2>
-      <p class="contact-lead">
-        お仕事・研究コラボ・技術的な話など、お気軽にご連絡ください。
-      </p>
-      <div class="contact-links">
-        <a href="https://github.com/maimaityyy" target="_blank" class="contact-card">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55v-2c-3.19.69-3.86-1.54-3.86-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.53-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.63 1.58.24 2.75.12 3.04.74.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55C20.21 21.38 23.5 17.08 23.5 12 23.5 5.73 18.27.5 12 .5z"/></svg>
-          <span>GitHub</span>
-          <small>@maimaityyy</small>
-        </a>
-        <a href="mailto:maito923923@gmail.com" class="contact-card">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span>Email</span>
-          <small>maito923923@gmail.com</small>
-        </a>
-        <a href="https://x.com/Maimai771695" target="_blank" class="contact-card">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          <span>X / Twitter</span>
-          <small>@Maimai771695</small>
-        </a>
+    <!-- ── CONTACT ── -->
+    <section id="contact" class="section">
+      <header class="section-head">
+        <span class="section-index">06</span>
+        <h2>CONTACT</h2>
+        <span class="section-rule"></span>
+        <span class="section-meta">GET IN TOUCH</span>
+      </header>
+
+      <div class="contact-grid">
+        <form class="panel contact-form" id="contact-form" novalidate
+              data-endpoint="https://formsubmit.co/ajax/04630a5b2550a72c24dc61afb42f9eeb">
+          <div class="panel-head"><span>CONTACT FORM</span><span class="chip" data-i18n="cf.chip">お問い合わせ</span></div>
+
+          <div class="field-row">
+            <label class="field">
+              <span>NAME <em data-i18n="cf.name">お名前</em></span>
+              <input type="text" name="name" autocomplete="name" data-i18n-ph="cf.namePh" placeholder="山田 太郎" required />
+            </label>
+            <label class="field">
+              <span>ORGANIZATION <em data-i18n="cf.org">ご所属（任意）</em></span>
+              <input type="text" name="organization" autocomplete="organization" data-i18n-ph="cf.orgPh" placeholder="株式会社〇〇 / 〇〇大学" />
+            </label>
+          </div>
+
+          <label class="field">
+            <span>EMAIL <em data-i18n="cf.email">返信先メールアドレス</em></span>
+            <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required />
+          </label>
+
+          <label class="field">
+            <span>MESSAGE <em data-i18n="cf.msg">お問い合わせ内容</em></span>
+            <textarea name="message" rows="7" data-i18n-ph="cf.msgPh" placeholder="お問い合わせ内容を記入" required></textarea>
+          </label>
+
+          <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="form-foot">
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <button type="submit" class="btn btn-primary" id="form-submit">SEND <span>→</span></button>
+          </div>
+        </form>
+
+        <aside class="contact-side">
+          <p class="contact-lead" data-i18n="cf.lead">お問い合わせは左記フォームにて受付<br />内容確認後 ご入力いただいたメールアドレス宛に返信</p>
+          <a href="https://www.linkedin.com/in/maito-sasaki-8b5a38401/" target="_blank" rel="noopener" class="panel link-card">
+            <span class="lc-label">LINKEDIN</span><strong>Maito Sasaki</strong><span class="lc-arrow">↗</span>
+          </a>
+          <a href="https://github.com/maimaityyy" target="_blank" rel="noopener" class="panel link-card">
+            <span class="lc-label">GITHUB</span><strong>@maimaityyy</strong><span class="lc-arrow">↗</span>
+          </a>
+        </aside>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- ── FOOTER ── -->
-  <footer>
-    <p>© 2026 Maito Sasaki (佐々木 舞人) — Built with vanilla code &amp; curiosity</p>
+  <footer class="command-footer">
+    <span>© 2026 MAITO SASAKI</span>
+    <span class="footer-mid">BUILT WITH VANILLA CODE &amp; CURIOSITY</span>
+    <span class="footer-links"><a href="https://www.linkedin.com/in/maito-sasaki-8b5a38401/" target="_blank" rel="noopener">LINKEDIN</a><a href="https://github.com/maimaityyy" target="_blank" rel="noopener">GITHUB</a></span>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

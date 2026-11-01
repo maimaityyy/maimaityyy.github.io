@@ -1,0 +1,71 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 3554 >>
+stream
+BT /F2 19 Tf 50 800 Td (MAITO SASAKI) Tj ET
+BT /F1 9 Tf 50 775 Td (maitosasaki.job@gmail.com  |  https://maimaityyy.github.io/) Tj ET
+BT /F1 9 Tf 50 761 Td (GitHub: https://github.com/maimaityyy) Tj ET
+BT /F2 10 Tf 50 736 Td (RESEARCH PROFILE) Tj ET
+BT /F1 10 Tf 50 722 Td (Master's student working on sparse-view 3D reconstruction with NeRF. Research experience includes literature) Tj ET
+BT /F1 10 Tf 50 710 Td (review, modifying a PyTorch-based implementation, and inspecting training logs and rendered images. Industry) Tj ET
+BT /F1 10 Tf 50 698 Td (experience spans image-generation AI research and AI-assistant development.) Tj ET
+BT /F2 10 Tf 50 676 Td (EDUCATION) Tj ET
+BT /F1 10 Tf 50 662 Td (Tokyo University of Technology | Apr 2026 - Mar 2028 \(expected\)) Tj ET
+BT /F1 10 Tf 50 646 Td (Graduate School of Bionics, Computer and Media Sciences, Master's Program in Computer Science. First-year) Tj ET
+BT /F1 10 Tf 50 634 Td (master's student.) Tj ET
+BT /F1 10 Tf 50 618 Td (Tokyo University of Technology | Apr 2022 - Mar 2026) Tj ET
+BT /F1 10 Tf 50 602 Td (Faculty of Computer Science, Department of Computer Science, Artificial Intelligence major.) Tj ET
+BT /F2 10 Tf 50 580 Td (RESEARCH EXPERIENCE) Tj ET
+BT /F1 10 Tf 50 566 Td (Sparse-view NeRF artifact analysis | Ongoing master's research) Tj ET
+BT /F1 10 Tf 50 550 Td (Investigating floating artifacts in FrugalNeRF-based 3D reconstruction, particularly in white and) Tj ET
+BT /F1 10 Tf 50 538 Td (textureless regions. Modify code and examine images and training logs to identify where and when artifacts) Tj ET
+BT /F1 10 Tf 50 526 Td (appear.) Tj ET
+BT /F1 10 Tf 50 510 Td (Exploring confidence derived from cross-scale reprojection error to guide geometric constraints in) Tj ET
+BT /F1 10 Tf 50 498 Td (unreliable regions. Currently organizing artifact occurrence conditions and training behavior to support) Tj ET
+BT /F1 10 Tf 50 486 Td (systematic evaluation. Validation is ongoing.) Tj ET
+BT /F2 10 Tf 50 464 Td (INDUSTRY EXPERIENCE) Tj ET
+BT /F1 10 Tf 50 450 Td (neoAI | AI Engineering Intern | Jun 2024 - Present) Tj ET
+BT /F1 10 Tf 50 434 Td (Led an image-AI joint research project with an entertainment company for approximately one year as) Tj ET
+BT /F1 10 Tf 50 422 Td (sub-project manager and technical theme lead. Responsibilities covered problem definition, method selection,) Tj ET
+BT /F1 10 Tf 50 410 Td (implementation, evaluation, progress reporting, and client alignment. This assignment has concluded.) Tj ET
+BT /F1 10 Tf 50 394 Td (Proposed an AI assistant in response to client workflow needs; the proposal was adopted as a new development) Tj ET
+BT /F1 10 Tf 50 382 Td (theme. Currently contribute to AI-assistant development on a different project.) Tj ET
+BT /F2 10 Tf 50 360 Td (TECHNICAL ACTIVITIES) Tj ET
+BT /F1 10 Tf 50 346 Td (NVIDIA Student Ambassador \(AI course\) | Apr 2026 - Present) Tj ET
+BT /F1 10 Tf 50 330 Td (Selected for a university-focused technical development program. Learn AI-related technologies with guidance) Tj ET
+BT /F1 10 Tf 50 318 Td (from NVAITC researchers and communicate technical work through workshop presentations.) Tj ET
+BT /F2 10 Tf 50 296 Td (TECHNICAL SKILLS) Tj ET
+BT /F1 10 Tf 50 282 Td (Python \(3+ years\), PyTorch, Linux \(3 years\), Shell \(1.5-2 years\).) Tj ET
+BT /F1 10 Tf 50 266 Td (NeRF / FrugalNeRF experimentation, image-generation AI, technical literature review, research prototyping,) Tj ET
+BT /F1 10 Tf 50 254 Td (and AI-assistant development. Ruby experience includes a bulletin-board application.) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000257 00000 n 
+0000000329 00000 n 
+0000000404 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+4010
+%%EOF
